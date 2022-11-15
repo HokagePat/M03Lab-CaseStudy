@@ -1,0 +1,54 @@
+#Author: Patrick Szpak
+#Date: 11/14/2022
+#Name: M03 Lab - Case Study: Lists, Functions, and Classes
+#Purpose: To ask user for vehicle info and display the info
+
+#Superclass
+class Vehicle:
+    def __init__(self,type):
+        self.type = type
+
+    def getType(self):
+        self.type = input('Enter the vehicle type (Car, truck, plane, etc): ')
+
+#Automobile class
+class Automobile(Vehicle):
+    def __init__(self, year, doors, make, model, roof):
+
+        self.year = year
+        self.doors = doors
+        self.make = make
+        self.model = model
+        self.roof = roof
+
+    def getYear(self):
+        self.year = input('Enter the vehicle year: ')
+        
+    def getDoors(self):
+        self.doors = input('Enter the number of vehicle doors (2-4): ')
+        
+    def getMake(self):
+        self.make = input('Enter the vehicle make (Car brand): ')
+        
+    def getModel(self):
+        self.model = input('Enter the vehicle model: ')
+
+    def getRoof(self):
+        self.roof = input('Enter the vehicle roof type (sun roof or solid): ')
+
+list1 = Automobile('n','n','n','n','n')
+
+Automobile.getType(list1)
+Automobile.getYear(list1)
+Automobile.getDoors(list1)
+Automobile.getMake(list1)
+Automobile.getModel(list1)
+Automobile.getRoof(list1)
+
+print("Vehicle type: ", list1.type)
+print("Year: ", list1.year)
+print("Make: ", list1.make)
+print("Model: ", list1.model)
+print("Number of doors: ", list1.doors)
+print("Type of roof: ", list1.roof)
+
